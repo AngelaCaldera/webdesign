@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Design</title>
+  <style>
+    /* Estilos CSS para el sitio web */
+
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilos del menú */
+    .menu {
+      background: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+
+    /* Estilos de las secciones */
+    section {
+      justify-content: left;
+      align-items: left;
+      text-align: center;
+    }
+
+    section a {
+      justify-content: left;
+      align-items: left;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 48px;
+      color: #7ED957;
+    }
+    section h1 {
+      font-size: 48px;
+      color: #233DFF;
+    }
+
+    section p {
+      font-size: 18px;
+      color: #333;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <header class="menu">
+    <img src="imagen/web1.png" alt="Texto alternativo" width="80" height="80"> 
+    <h1> Web Design </h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#flexbox">Flexbox</a>
+      <a href="#mockup">Mockup</a>
+      <a href="#acerca-de">Acerca de</a>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h1>Bienvenidos a Web Design</h1>
+    <p> Nos complace darle la bienvenida a nuestro sitio web, diseñada especialmente para que pueda sumergirse al emocionante universo del desarrollo web. Aquí encontrará todo lo que necesita para construir sitios web a la medida y funcionales.</p>
+
+    <p> Si es un principiante entusiasmado o un desarrollador experimentado en busca de nuevas herramientas y recursos, ha llegado al lugar adecuado. Nuestro objetivo es proporcionarle una plataforma completa y actualizada que le proporcione una panorama más claro acerca del desarrollo web.</p>
+
+    <p> Aprenda a crear páginas web atractivas, optimizadas para dispositivos móviles y amigables con los motores de búsqueda. Descubra las mejores prácticas en diseño web, programación, seguridad y mucho más.</p>
+
+    <p> Contamos con una gran cantidad de herramientas y recursos, donde encontrará los mejores frameworks, bibliotecas, editores de código y otros recursos útiles para acelerar su proceso de desarrollo.</p>
+
+    <p> Estaremos siempre dispuestos para ayudarle en cada proceso que inicie en nuestra plataforma. Estamos comprometidos en proporcionarle todo el apoyo necesario para que alcance sus metas en el mundo del desarrollo web.</p>
+
+    <p> Comience a explorar todo lo que tenemos para ofrecerle. En esta página encontrará todo lo que necesita para la creación de increíbles sitios web.</p>
+
+  </section>
+  <hr>
+
+  <section id="flexbox">
+    <h1>Flexbox</h1>
+    <p>Flexbox es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños. En este artículo expondremos todas sus características básicas.</p>
+    <p>¿Por qué flexbox?
+    Durante mucho tiempo, las únicas herramientas fiables con compatibilidad cruzada entre navegadores disponibles para crear diseños CSS fueron cosas como la flotación y el posicionamiento (en-US). Están bien y funcionan, pero de alguna manera también limitan bastante y frustran.</p>
+    <p>Con tales herramientas resulta difícil, si no imposible, lograr obtener en cualquier forma conveniente y flexible un diseño de página sencillo con unos requisitos como los siguientes:</p>
+    <p>Centrar verticalmente un bloque de contenido dentro de su elemento padre.</p>
+    <p>Hacer que todos los elementos secundarios de un contenedor ocupen una cantidad igual del ancho/alto disponible, independientemente del ancho/alto que haya disponible.</p>
+    <p>Hacer que todas las columnas en una compaginación en columnas múltiples adopten la misma altura incluso si contienen cantidades diferentes de contenido.</p>
+    <p>Como verás en las secciones siguientes, los elementos flexbox facilitan mucho algunas tareas de compaginación.</p>
+    <img src="imagen/ejemplo.png">
+
+    <p>Verás que hay un elemento header con un encabezado de nivel superior en él, y un elemento section que contiene tres elementos article. Los usaremos para crear una compaginación bastante habitual de tres columnas.</p>
+    <p>Especificar qué elementos colocar como cajas flexibles
+    <p>Para comenzar, vamos a seleccionar qué elementos se van a presentar como cajas flexibles. Para ello, establecemos un valor especial de display en el elemento padre de los elementos que deseas editar. En este caso, queremos compaginar los elementos article, por lo que lo establecemos en section (que se convierte en un contenedor flexible):</p>
+
+    <p>Código CSS
+      section {
+      display: flex;
+      }</p>
+    <p>El modelo flexible</p>
+    <p>Esto hace que el elemento section se convierta en contenedor flex, y sus hijos en elementos flexibles. El resultado de esto debería ser algo así:</p>
+    <img src="imagen/flexterm.png">
+
+    <p>El eje principal (main axis) es el eje que corre en la dirección en que se colocan los elementos flexibles (por ejemplo, según se disponen las filas en una página o hacia abajo según se disponen las columnas en una página). El inicio y el final de este eje se denominan inicio principal (main start) y final principal (main end).</p>
+    <p>El eje transversal (cross axis) es el eje que corre perpendicular a la dirección en la que se colocan los elementos flexibles. El inicio y el final de este eje se denominan inicio transversal (cross start) y extremo cruzado (cross end).</p>
+    <p>El elemento padre que tiene establecido display: flex (el elemento section en nuestro ejemplo) se llama contenedor flexible.</p>
+    <p>Los elementos que se presentan como cajas flexibles dentro del contenedor flexible se denominan elementos flexibles (son los elementos article de nuestro ejemplo).</p>
+    <p>¿Columnas o filas?</p>
+    <p>Los elementos flexbox proporcionan una propiedad llamada flex-direction que especifica en qué dirección corre el eje principal (en qué dirección están dispuestos los elementos hijo de un elemento flexbox); por defecto, está establecido en el valor row, por lo que se presenta en una fila en la dirección en que se escribe el idioma predeterminado de tu navegador (de izquierda a derecha, en el caso de un navegador en español).</p>
+    <p>Añade la declaración siguiente a tu regla section:</p>
+    <p>Código CSS</p>
+    <p>flex-direction: column;</p>
+    <p>Observa que esto vuelve a colocar los elementos en una disposición en columna, al igual que antes de añadir cualquier CSS.</p>
+    <p>Delimitar</p>
+    <p>Un problema que surge cuando tienes una cantidad fija de ancho o alto en tu diseño es que los hijos de un elemento flexbox eventualmente desbordan el contenedor y rompen el diseño. Echa un vistazo a nuestro ejemplo flexbox-wrap0.html e intenta verlo en vivo (toma una copia local de este archivo si deseas seguir este ejemplo):</p>
+    <img src="imagen/ejemplo2.png">
+
+    <p>Aquí vemos que los elementos hijo se salen de su contenedor. Una forma de solucionar esto es añadir las declaraciones siguientes a tu regla section:</p>
+    <p>flex-wrap: wrap;
+    flex: 200px;</p>
+    <img src="imagen/ejemplo3.png">
+    <p>Ahora hay varias filas y en cada fila caben tantos elementos hijo de un elemento flexbox como sean necesarios, y cualquier desbordamiento hace saltar el elemento hacia la línea siguiente. La declaración flex: 200px que hemos establecido en los artículos significa que cada uno tendrá al menos 200 px de ancho; discutiremos esta propiedad con más detalle más adelante. Observa también que los últimos elementos hijo de la última fila se agrandan hasta rellenar toda la fila.</p>
+
+
+  </section>
+  <hr>
+
+  <section id="mockup">
+    <h1>Mockup</h1>
+    <p>Este es el modelo de maqueta que presento para mostrar cómo se va a ver mi página web que he creado para la actividad asignada.</p>
+    <img src="imagen/mockup.png">
+  </section>
+  <hr>
+
+  <section id="acerca-de">
+    <h1>Acerca de</h1>
+    <p>Angela Beatríz Caldera Otero</p>
+    <p>Ingeniería de Sistema</p>
+    <p>Todos los derechos reservados © Junio 28 de 2023</p>
+  </section>
+</body>
+</html>
